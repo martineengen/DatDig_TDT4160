@@ -10,8 +10,8 @@
 #include <stdbool.h>
 
 // Type-aliaser
-typedef uint32_t word;
 typedef uint8_t  byte;
+typedef uint32_t word;                  // et word er altså 4 byte
 
 // Prototyper for bibliotekfunksjoner
 void init(void);

@@ -18,10 +18,10 @@
  * Konverterer et nummer mellom 0 og 99 til string
  *****************************************************************************/
 void int_to_string(char *timestamp, unsigned int offset, int i) {
-    if (i > 99)
+    if (i > 99)                                     // kan maksimalt vises et tall med to siffer, altså er 99 maks
     {
         timestamp[offset]   = '9';
-        timestamp[offset+1] = '9';
+        timestamp[offset+1] = '9';                  // offset er posisjonen til tallet i en string (array av chars) som har 7 elementer
         return;
     }
 
@@ -34,7 +34,7 @@ void int_to_string(char *timestamp, unsigned int offset, int i) {
 		
 	    } else
 	    {
-		    timestamp[offset+1] = '0' + i;				// string pluss et heltall blir at man plusser på stringen
+		    timestamp[offset+1] = '0' + i;			// string pluss et heltall blir at man plusser på stringen
 		    i=0;
 	    }
     }
